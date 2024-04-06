@@ -1,0 +1,28 @@
+.custom {
+  background: linear-gradient(-30deg, #0e0725 0%, #5c03bc 33%, #e536ab 66%, #f4e5f0 100%);
+}
+
+.zoom {
+  transition: transform 0.2s ease;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.jump:hover {
+  animation: jumping 0.5s;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
