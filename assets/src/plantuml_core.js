@@ -25,7 +25,14 @@ function debounce(func, delay = 400) {
 }
 
 const debouncedRender = debounce(() => _render())
-const jarPath = "/app/assets/lib"
+
+let currentPath = window.location.pathname;
+if (currentPath == "/") {
+    currentPath = "";
+}
+
+const jarPath = `/app/${currentPath}assets/lib`;
+console.log("Jar path: " + jarPath);
 
 plantuml.initialize(jarPath).then(() => {
     document.addEventListener('DOMContentLoaded', (event) => {
