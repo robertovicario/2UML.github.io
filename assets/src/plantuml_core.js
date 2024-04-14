@@ -32,8 +32,6 @@ if (currentPath == "/") {
 }
 
 const jarPath = `/app/${currentPath}assets/lib`;
-console.log("Jar path: " + jarPath);
-
 plantuml.initialize(jarPath).then(() => {
     document.addEventListener('DOMContentLoaded', (event) => {
         debouncedRender()
