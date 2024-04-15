@@ -1,10 +1,9 @@
 import { initializeCompiler } from "../js/code_mirror.js";
 
-const pathname = window.location.pathname.replace(/\/$/, '');
+let currentPath = window.location.pathname;
 const compiler = initializeCompiler();
 const compiler_uml = document.getElementById('compiler');
 const img_uml = document.getElementById('img-uml');
-
 function render() {
     plantuml.renderPng(compiler.getValue())
         .then(blob => {
@@ -27,7 +26,6 @@ function debounce(func, delay = 400) {
 const debouncedRender = debounce(() => render())
 
 compiler.on('change',()=>debouncedRender());
-let currentPath = window.location.pathname;
 if (currentPath.includes('index.html')) {
     currentPath = currentPath.replace('index.html', '');
 }
