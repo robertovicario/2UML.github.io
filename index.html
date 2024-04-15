@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>2UML</title>
-    <meta name="theme-color" content="#5c03bc">
+    <meta name="theme-color" content="#e536ab">
     <link rel="canonical" href="https://robertovicario.github.io/2UML/">
     <meta property="og:url" content="https://robertovicario.github.io/2UML/">
     <meta name="twitter:description" content="A user-friendly tool that generates UMLs starting from natural language inputs.">
@@ -31,14 +31,14 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json?h=e5aee55df2871b75a79f92e2206b007b" crossorigin="use-credentials">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=e61aba5a56369b8fb13f755a36350339">
-    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=e03d0fb646fcf1c2340ca4e185518652">
+    <link rel="manifest" href="manifest.json?h=ea0827671849e0921f72d4e05803fb4c" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=f24ddaf3d4b67081c0b0f422a35cb38c">
+    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=ef931c4577ae058c306d1b1df7b2ed95">
     <link rel="stylesheet" href="assets/css/code_mirror.css?h=c79f051ba28e18f7c0c05abd75912cad">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
-    <link rel="stylesheet" href="assets/css/loader.css?h=581bb60eceab2fb612d0fc87111d71b5">
-    <link rel="stylesheet" href="assets/css/styles.css?h=1d2e1dc9e462b6c3066f78cee886bb80">
+    <link rel="stylesheet" href="assets/css/loader.css?h=17fdd0ceec425b6bb6b2c59a13f44e7d">
+    <link rel="stylesheet" href="assets/css/styles.css?h=0d62efe58abef66bf2bf54397c96b890">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 </style>
@@ -47,7 +47,11 @@
 </head>
 
 <body>
-    <!-- Start: Sidebar With Menu -->
+    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 10px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom" style="color: var(--bs-body-color);font-size: 24px;">
+
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 6.44772 3.44772 6 4 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H4C3.44772 8 3 7.55228 3 7Z" fill="currentColor"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 13C3 12.4477 3.44772 12 4 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H4C3.44772 14 3 13.5523 3 13Z" fill="currentColor"></path>
+            </svg></a></div><!-- Start: Sidebar With Menu -->
     <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvas-menu" style="border-right: 2px solid var(--bs-body-color) ;">
         <div class="offcanvas-header d-flex justify-content-center align-items-center" style="padding: 20px;">
             <h1 style="width: 100%;font-size: 32px;margin: 0;font-family: 'Honk', system-ui;">2UML</h1><a class="zoom" href="#" style="padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;color: var(--bs-body-color);" aria-label="Close" data-bs-dismiss="offcanvas">
@@ -61,7 +65,7 @@
                     <li class="nav-item"><a class="nav-link active link-light custom" href="https://github.com/robertovicario/2UML" aria-current="page" style="padding: 20px;border-radius: 0;font-size: 20px;border: 2px solid var(--bs-body-color);font-family: Inter, sans-serif;" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
                             </svg> Open Repository</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="/" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-clockwise me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" onclick="location.reload()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-clockwise me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"></path>
                                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"></path>
                             </svg> Reload</a><a class="nav-link link-body-emphasis" id="btn-theme" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-mask me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
@@ -78,11 +82,6 @@
             </div>
         </div>
     </div><!-- End: Sidebar With Menu -->
-    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 10px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom" style="color: var(--bs-body-color);font-size: 24px;">
-
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 6.44772 3.44772 6 4 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H4C3.44772 8 3 7.55228 3 7Z" fill="currentColor"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 13C3 12.4477 3.44772 12 4 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H4C3.44772 14 3 13.5523 3 13Z" fill="currentColor"></path>
-            </svg></a></div>
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-1" style="padding: 20px;">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
             <div class="modal-content">
