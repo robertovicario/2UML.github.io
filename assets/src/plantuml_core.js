@@ -1,39 +1,26 @@
-const pathname = window.location.pathname.match(/^.*[\/]/)[0]
-window.location.hash.substr(1).split('&').reduce(function (res, item) {
-    var parts = item.split('=')
-    res[parts[0]] = parts[1]
-    return res
-}, {})
-const editor = document.getElementById('compiler');
+const pathname = window.location.pathname.replace(/\/$/, '');
 
-function _render() {
-    plantuml.renderPng(editor.value).then((blob) => {
-        document.getElementById('img-uml').src = "";
-        document.getElementById('img-uml').src = window.URL.createObjectURL(blob);
-    }).catch((error) => {
-        console.log(error)
+const compiler_uml = document.getElementById('compiler');
+const img_uml = document.getElementById('img-uml');
+
+function render() {
+    plantuml.renderPng(compiler_uml.value)
+        .then(blob => {
+            img_uml.src = window.URL.createObjectURL(blob);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
+
+compiler_uml.addEventListener('input', render);
+
+let currentPath = window.location.pathname === "/" ? "" : window.location.pathname;
+const jarPath = `/app/${currentPath}assets/lib`;
+plantuml.initialize(jarPath)
+    .then(() => {
+        render(); // Initial render
     })
-}
-
-function debounce(func, delay = 400) {
-    let timerId;
-    return (...args) => {
-        clearTimeout(timerId);
-        timerId = setTimeout(() => {
-            func.apply(this, args);
-        }, delay);
-    };
-}
-
-const debouncedRender = debounce(() => _render())
-
-let currentPath = window.location.pathname;
-if (currentPath == "/") {
-    currentPath = "";
-}
-
-let jarPath = `/app/${currentPath}assets/lib`;
-plantuml.initialize(jarPath).then(() => {
-    document.addEventListener('DOMContentLoaded', debouncedRender());
-    editor.addEventListener('input', debouncedRender());
-});
+    .catch(error => {
+        console.error("Error initializing PlantUML:", error);
+    });
