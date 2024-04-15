@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>2UML</title>
-    <meta name="theme-color" content="black">
+    <meta name="theme-color" content="#5c03bc">
     <link rel="canonical" href="https://robertovicario.github.io/2UML/">
     <meta property="og:url" content="https://robertovicario.github.io/2UML/">
     <meta name="twitter:description" content="A user-friendly tool that generates UMLs starting from natural language inputs.">
@@ -31,14 +31,14 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json?h=f675c9e6979c44a498f7de97cd4fad02" crossorigin="use-credentials">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=8eafeae61ff8daca20d7ccf68cf558c2">
-    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=f81ff562a9893d228b255d0364a37c32">
+    <link rel="manifest" href="manifest.json?h=e5aee55df2871b75a79f92e2206b007b" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=6bf7838f7976599348d6d6c6402ca47f">
+    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=dece270c0505fd51a70de7c25fb71b39">
     <link rel="stylesheet" href="assets/css/code_mirror.css?h=c79f051ba28e18f7c0c05abd75912cad">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
-    <link rel="stylesheet" href="assets/css/loader.css?h=05f8705ec265076de9d0fa8086516620">
-    <link rel="stylesheet" href="assets/css/styles.css?h=701d740e5eeeea4696f9c5ccc0909f3c">
+    <link rel="stylesheet" href="assets/css/loader.css?h=581bb60eceab2fb612d0fc87111d71b5">
+    <link rel="stylesheet" href="assets/css/styles.css?h=1d2e1dc9e462b6c3066f78cee886bb80">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 </style>
@@ -50,24 +50,24 @@
     <!-- Start: Sidebar With Menu -->
     <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvas-menu" style="border-right: 2px solid var(--bs-body-color) ;">
         <div class="offcanvas-header d-flex justify-content-center align-items-center" style="padding: 20px;">
-            <h1 style="width: 100%;font-size: 32px;margin: 0;font-family: 'Honk', system-ui;">2UML</h1><a class="zoom" href="#" style="padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-lg" style="font-size: 24px;color: var(--bs-body-color);" aria-label="Close" data-bs-dismiss="offcanvas">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+            <h1 style="width: 100%;font-size: 32px;margin: 0;font-family: 'Honk', system-ui;">2UML</h1><a class="zoom" href="#" style="padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;color: var(--bs-body-color);" aria-label="Close" data-bs-dismiss="offcanvas">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="currentColor"></path>
                 </svg></a>
         </div>
         <div class="offcanvas-body d-flex flex-column justify-content-between pt-0" style="padding-right: 20px;padding-bottom: 20px;">
             <div>
                 <div style="width: 100%;background: var(--bs-body-color);height: 2px;margin-bottom: 20px;"></div>
                 <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item"><a class="nav-link active link-light custom" href="https://github.com/robertovicario/2UML" aria-current="page" style="padding: 20px;border-radius: 0;font-size: 20px;border: 2px solid var(--bs-body-color);font-family: Inter, sans-serif;" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                    <li class="nav-item"><a class="nav-link active link-light custom" href="https://github.com/robertovicario/2UML" aria-current="page" style="padding: 20px;border-radius: 0;font-size: 20px;border: 2px solid var(--bs-body-color);font-family: Inter, sans-serif;" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
                             </svg> Open Repository</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="index.html" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-clockwise me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="/" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-clockwise me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"></path>
                                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"></path>
-                            </svg> Reload</a><a class="nav-link link-body-emphasis" id="btn-theme" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-mask me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                            </svg> Reload</a><a class="nav-link link-body-emphasis" id="btn-theme" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-mask me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546zM4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"></path>
                             </svg>&nbsp;Switch Theme</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" data-bs-target="#modal-1" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-qr-code me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#" style="padding: 20px;font-size: 20px;font-family: Inter, sans-serif;" data-bs-target="#modal-1" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-qr-code me-2 zoom" style="font-size: 32px;margin-right: 20px!important;">
                                 <path d="M2 2h2v2H2z"></path>
                                 <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"></path>
                                 <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"></path>
@@ -78,10 +78,12 @@
             </div>
         </div>
     </div><!-- End: Sidebar With Menu -->
-    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 12px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-list zoom" style="color: var(--bs-body-color);font-size: 32px;">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"></path>
+    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 10px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom" style="color: var(--bs-body-color);font-size: 24px;">
+
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 6.44772 3.44772 6 4 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H4C3.44772 8 3 7.55228 3 7Z" fill="currentColor"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 13C3 12.4477 3.44772 12 4 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H4C3.44772 14 3 13.5523 3 13Z" fill="currentColor"></path>
             </svg></a></div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1" style="padding: 20px;">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-center align-items-center" style="padding: 20px;background: white;">
@@ -107,8 +109,8 @@
     Server --> Client: Response
 @enduml</textarea></div>
                 <div class="col d-flex flex-row justify-content-center align-items-end custom" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;border: 2px solid var(--bs-body-color);">
-                    <div class="d-flex justify-content-center align-items-center" style="padding: 20px;border-radius: 20px;background: white;width: 100%;height: 300px;"><img id="img-uml" style="width: 100%;height: 300px;object-fit: contain;object-position: center;background-repeat: no-repeat;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
-                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;height: 300px;width: 224px;"><div id="loader-img-uml" class="none">
+                    <div class="d-flex justify-content-center align-items-center" style="padding: 20px;border-radius: 20px;background: white;width: 100%;height: 300px;"><img id="img-uml" class="none" style="width: 100%;height: 300px;object-fit: contain;object-position: center;background-repeat: no-repeat;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
+                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;height: 300px;width: 224px;"><div id="loader-img-uml">
     <svg class="circle-outer" viewBox="0 0 86 86">
         <circle class="back" cx="43" cy="43" r="40"></circle>
         <circle class="front" cx="43" cy="43" r="40"></circle>
@@ -123,8 +125,8 @@
         <circle class="front" cx="17" cy="17" r="14"></circle>
     </svg>
 </div></div>
-                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;background: white;color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cloud-download-fill" style="font-size: 24px;">
-                            <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z"></path>
+                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 10px;background: white;color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 9.5C2 11.433 3.567 13 5.5 13H9V15.5858L7.70711 14.2929C7.31658 13.9024 6.68342 13.9024 6.29289 14.2929C5.90237 14.6834 5.90237 15.3166 6.29289 15.7071L9.29289 18.7071C9.68342 19.0976 10.3166 19.0976 10.7071 18.7071L13.7071 15.7071C14.0976 15.3166 14.0976 14.6834 13.7071 14.2929C13.3166 13.9024 12.6834 13.9024 12.2929 14.2929L11 15.5858V13H13.5C15.9853 13 18 10.9853 18 8.5C18 6.01472 15.9853 4 13.5 4C13.2912 4 13.0857 4.01422 12.8845 4.04175C12.4551 2.29538 10.8788 1 9 1C6.79086 1 5 2.79086 5 5C5 5.35223 5.04553 5.69382 5.13102 6.01922C3.37146 6.20358 2 7.69163 2 9.5ZM11 13H9V8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8V13Z" fill="currentColor"></path>
                         </svg></button>
                 </div>
             </div>
@@ -134,7 +136,7 @@
                         <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;border: 2px solid var(--bs-body-color);">
                             <form method="post">
                                 <div class="d-flex justify-content-center align-items-end mb-3" style="margin: 0!important;padding: 0;">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="border-width: 0px;border-radius: 0;font-family: Inter, sans-serif;margin-bottom: 20px;" placeholder="Design a program ..."></textarea><select class="form-select" id="select-uml" style="padding: 12px;font-family: Inter, sans-serif;border-radius: 0;border: 2px solid var(--bs-body-color) ;" required="">
+                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="border-width: 0px;border-radius: 0;font-family: Inter, sans-serif;margin-bottom: 20px;padding: 10px;resize: none;height: 64px;" placeholder="Design a program ..."></textarea><select class="form-select" id="select-uml" style="padding: 10px;font-family: Inter, sans-serif;border-radius: 0;border: 2px solid var(--bs-body-color);" required="">
                                             <option value="">Activity</option>
                                             <option value="">Class</option>
                                             <option value="">Component</option>
@@ -144,8 +146,8 @@
                                             <option value="">State</option>
                                             <option value="">Use-case</option>
                                             <option value="">Timing</option>
-                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="button" style="border-width: 0px;border-radius: 100%;padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-return-left" style="font-size: 24px;">
-                                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="button" style="border-width: 0px;border-radius: 100%;padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 9.70711C2.90237 9.31658 2.90237 8.68342 3.29289 8.29289L9.29289 2.29289C9.68342 1.90237 10.3166 1.90237 10.7071 2.29289L16.7071 8.29289C17.0976 8.68342 17.0976 9.31658 16.7071 9.70711C16.3166 10.0976 15.6834 10.0976 15.2929 9.70711L11 5.41421L11 17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17L9 5.41421L4.70711 9.70711C4.31658 10.0976 3.68342 10.0976 3.29289 9.70711Z" fill="currentColor"></path>
                                         </svg></button>
                                 </div>
                             </form>
@@ -167,6 +169,7 @@
 <script src="assets/src/compiler/code_mirror.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/desc.js?h=78195a7192dae9b754e249c68c981034"></script>
     <script src="assets/js/download-uml.js?h=0ab5500c4f1312ec5e5581be65b8a81e"></script>
     <script src="assets/js/theme.js?h=e5d617e6d0ada1416e9cf499e3dc5d70"></script>
 </body>
