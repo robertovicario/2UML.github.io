@@ -19,8 +19,8 @@ let currentPath = window.location.pathname === "/" ? "" : window.location.pathna
 const jarPath = `/app/${currentPath}assets/lib`;
 plantuml.initialize(jarPath)
     .then(() => {
-        render(); // Initial render
+        render();
     })
     .catch(error => {
-        console.error("Error initializing PlantUML:", error);
+        console.error("Error: ", error);
     });
