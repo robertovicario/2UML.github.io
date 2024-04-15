@@ -5,170 +5,131 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>2UML</title>
-    <script src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script>
+    <meta name="theme-color" content="black">
+    <link rel="canonical" href="https://robertovicario.github.io/2UML/">
+    <meta property="og:url" content="https://robertovicario.github.io/2UML/">
+    <meta name="twitter:description" content="A user-friendly tool that generates UMLs starting from natural language inputs.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="A user-friendly tool that generates UMLs starting from natural language inputs.">
+    <meta property="og:image" content="https://robertovicario.github.io/2UML/assets/img/2UML_Banner.png">
+    <meta name="twitter:image" content="https://robertovicario.github.io/2UML/assets/img/2UML_Banner.png">
+    <meta name="twitter:title" content="2UML">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "2UML",
+            "url": "https://robertovicario.github.io/2UML"
+        }
+    </script>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?h=96a5618632ab11689a39dccf0a39f25f">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?h=96a5618632ab11689a39dccf0a39f25f">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?h=96a5618632ab11689a39dccf0a39f25f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?h=96a5618632ab11689a39dccf0a39f25f">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?h=96a5618632ab11689a39dccf0a39f25f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?h=96a5618632ab11689a39dccf0a39f25f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png?h=96a5618632ab11689a39dccf0a39f25f">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=96a5618632ab11689a39dccf0a39f25f">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=3a7eb93697e85128594b74e93108aaf6">
-    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=a4c60f268074573167c4fe4d631a7f62">
+    <link rel="manifest" href="manifest.json?h=236835c50364c5aa18c857fcb8eb3887" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=0cb74a78737bbb051bda6c3a089f5e5b">
+    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=14e13176471d44c15df2b5ee189233a3">
+    <link rel="stylesheet" href="assets/css/code_mirror.css?h=c79f051ba28e18f7c0c05abd75912cad">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
-    </style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap')
+</style>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/theme/the-matrix.css">
 </head>
 
 <body>
-    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#"
-            style="margin: 20px;padding: 12px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg
-                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom"
-                style="color: black;font-size: 24px;">
-
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M3 7C3 6.44772 3.44772 6 4 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H4C3.44772 8 3 7.55228 3 7Z"
-                    fill="currentColor"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M3 13C3 12.4477 3.44772 12 4 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H4C3.44772 14 3 13.5523 3 13Z"
-                    fill="currentColor"></path>
-            </svg></a></div><!-- Start: Sidebar With Menu -->
-    <div class="offcanvas offcanvas-start bg-body" tabindex="-1" data-bs-backdrop="false" id="offcanvas-menu"
-        style="border-right: 2px solid black ;">
-        <div class="offcanvas-header" style="padding: 20px;"><a
-                class="link-body-emphasis d-flex justify-content-center align-items-center me-md-auto mb-3 mb-md-0 text-decoration-none"><span
-                    class="fs-4" style="font-family: 'Honk', system-ui;">2UML</span></a><a class="zoom" href="#"
-                style="padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                    viewBox="0 0 20 20" fill="none" style="font-size: 24px;color: black;" aria-label="Close"
-                    data-bs-dismiss="offcanvas">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
-                        fill="currentColor"></path>
-                </svg></a></div>
-        <div class="offcanvas-body d-flex flex-column justify-content-between pt-0"
-            style="padding-right: 20px;padding-bottom: 20px;">
+    <!-- Start: Sidebar With Menu -->
+    <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvas-menu" style="border-right: 2px solid var(--bs-body-color) ;">
+        <div class="offcanvas-header d-flex justify-content-center align-items-center" style="padding: 20px;">
+            <h1 style="width: 100%;font-size: 32px;margin: 0;font-family: 'Honk', system-ui;">2UML</h1><a class="zoom" href="#" style="padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-lg" style="font-size: 24px;color: var(--bs-body-color);" aria-label="Close" data-bs-dismiss="offcanvas">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+                </svg></a>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between pt-0" style="padding-right: 20px;padding-bottom: 20px;">
             <div>
-                <div style="width: 100%;background: black;height: 2px;margin-bottom: 20px;"></div>
+                <div style="width: 100%;background: var(--bs-body-color);height: 2px;margin-bottom: 20px;"></div>
                 <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item"><a class="nav-link active link-light custom"
-                            href="https://github.com/robertovicario/2UML" aria-current="page"
-                            style="padding: 20px;border-radius: 0;border: 2px solid black;font-size: 20px;"
-                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                fill="currentColor" viewBox="0 0 16 16" class="bi bi-github me-2 zoom"
-                                style="font-size: 32px;">
-                                <path
-                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8">
-                                </path>
+                    <li class="nav-item"><a class="nav-link active link-light custom" href="https://github.com/robertovicario/2UML" aria-current="page" style="padding: 20px;border-radius: 0;font-size: 20px;border: 2px solid var(--bs-body-color);" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
                             </svg> Open Repository</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#"
-                            style="padding: 20px;font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                                height="1em" viewBox="0 0 20 20" fill="none" class="me-2 zoom" style="font-size: 32px;">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4 2C4.55228 2 5 2.44772 5 3V5.10125C6.27009 3.80489 8.04052 3 10 3C13.0494 3 15.641 4.94932 16.6014 7.66675C16.7855 8.18747 16.5126 8.75879 15.9918 8.94284C15.4711 9.12689 14.8998 8.85396 14.7157 8.33325C14.0289 6.38991 12.1755 5 10 5C8.36507 5 6.91204 5.78502 5.99935 7H9C9.55228 7 10 7.44772 10 8C10 8.55228 9.55228 9 9 9H4C3.44772 9 3 8.55228 3 8V3C3 2.44772 3.44772 2 4 2ZM4.00817 11.0572C4.52888 10.8731 5.1002 11.146 5.28425 11.6668C5.97112 13.6101 7.82453 15 10 15C11.6349 15 13.088 14.215 14.0006 13L11 13C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H16C16.2652 11 16.5196 11.1054 16.7071 11.2929C16.8946 11.4804 17 11.7348 17 12V17C17 17.5523 16.5523 18 16 18C15.4477 18 15 17.5523 15 17V14.8987C13.7299 16.1951 11.9595 17 10 17C6.95059 17 4.35905 15.0507 3.39857 12.3332C3.21452 11.8125 3.48745 11.2412 4.00817 11.0572Z"
-                                    fill="currentColor"></path>
-                            </svg> Reload</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#"
-                            style="padding: 20px;font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                                height="1em" viewBox="0 0 20 20" fill="none" class="me-2 zoom" style="font-size: 32px;">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M3 4C3 3.44772 3.44772 3 4 3H7C7.55228 3 8 3.44772 8 4V7C8 7.55228 7.55228 8 7 8H4C3.44772 8 3 7.55228 3 7V4ZM5 6V5H6V6H5Z"
-                                    fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M3 13C3 12.4477 3.44772 12 4 12H7C7.55228 12 8 12.4477 8 13V16C8 16.5523 7.55228 17 7 17H4C3.44772 17 3 16.5523 3 16V13ZM5 15V14H6V15H5Z"
-                                    fill="currentColor"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M13 3C12.4477 3 12 3.44772 12 4V7C12 7.55228 12.4477 8 13 8H16C16.5523 8 17 7.55228 17 7V4C17 3.44772 16.5523 3 16 3H13ZM14 5V6H15V5H14Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M11 4C11 3.44772 10.5523 3 10 3C9.44772 3 9 3.44772 9 4V5C9 5.55228 9.44772 6 10 6C10.5523 6 11 5.55228 11 5V4Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M10 7C10.5523 7 11 7.44772 11 8V9H13C13.5523 9 14 9.44772 14 10C14 10.5523 13.5523 11 13 11H10C9.44772 11 9 10.5523 9 10V8C9 7.44772 9.44772 7 10 7Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M16 9C15.4477 9 15 9.44772 15 10C15 10.5523 15.4477 11 16 11C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M9 13C9 12.4477 9.44772 12 10 12H11C11.5523 12 12 12.4477 12 13C12 13.5523 11.5523 14 11 14V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V13Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M7 11C7.55228 11 8 10.5523 8 10C8 9.44772 7.55228 9 7 9H4C3.44772 9 3 9.44771 3 10C3 10.5523 3.44772 11 4 11H7Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M17 13C17 13.5523 16.5523 14 16 14H14C13.4477 14 13 13.5523 13 13C13 12.4477 13.4477 12 14 12H16C16.5523 12 17 12.4477 17 13Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M16 17C16.5523 17 17 16.5523 17 16C17 15.4477 16.5523 15 16 15H13C12.4477 15 12 15.4477 12 16C12 16.5523 12.4477 17 13 17H16Z"
-                                    fill="currentColor"></path>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="/" style="padding: 20px;font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-clockwise me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"></path>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"></path>
+                            </svg> Reload</a><a class="nav-link link-body-emphasis" id="btn-theme" style="padding: 20px;font-size: 20px;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-mask me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                                <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546zM4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"></path>
+                            </svg>&nbsp;Switch Theme</a></li>
+                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#" style="padding: 20px;" data-bs-target="#modal-1" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-qr-code me-2 zoom" style="font-size: 32px;margin-right: 12px!important;">
+                                <path d="M2 2h2v2H2z"></path>
+                                <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"></path>
+                                <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"></path>
+                                <path d="M10 0v6h6V0zm5 1v4h-4V1zM8 1V0h1v2H8v2H7V1zm0 5V4h1v2zM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8zm0 0v1H2V8H1v1H0V7h3v1zm10 1h-1V7h1zm-1 0h-1v2h2v-1h-1zm-4 0h2v1h-1v1h-1zm2 3v-1h-1v1h-1v1H9v1h3v-2zm0 0h3v1h-2v1h-1zm-4-1v1h1v-2H7v1z"></path>
+                                <path d="M7 12h1v3h4v1H7zm9 2v2h-3v-1h2v-1z"></path>
                             </svg> Scan QR</a></li>
-                    <li class="nav-item"><a class="nav-link link-body-emphasis" href="#"
-                            style="padding: 20px;font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                                height="1em" viewBox="0 0 20 20" fill="none" class="me-2 zoom" style="font-size: 32px;">
-
-                                <path
-                                    d="M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 5.12548 12.0077 5.24917 12.0227 5.37061L7.08259 7.84064C6.54303 7.32015 5.8089 7 5 7C3.34315 7 2 8.34315 2 10C2 11.6569 3.34315 13 5 13C5.80892 13 6.54306 12.6798 7.08263 12.1593L12.0227 14.6293C12.0077 14.7508 12 14.8745 12 15C12 16.6569 13.3431 18 15 18C16.6569 18 18 16.6569 18 15C18 13.3431 16.6569 12 15 12C14.1911 12 13.457 12.3201 12.9174 12.8406L7.97733 10.3706C7.9923 10.2492 8 10.1255 8 10C8 9.8745 7.99229 9.7508 7.97733 9.62934L12.9174 7.15932C13.4569 7.67984 14.1911 8 15 8Z"
-                                    fill="currentColor"></path>
-                            </svg> Share Application</a></li>
                 </ul>
             </div>
         </div>
     </div><!-- End: Sidebar With Menu -->
-    <section class="d-flex flex-column justify-content-center align-items-center"
-        style="width: 100%;min-height: 100vh;padding: 20px;margin-top: 48px;">
+    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 12px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-list zoom" style="color: var(--bs-body-color);font-size: 32px;">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"></path>
+            </svg></a></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body d-flex justify-content-center align-items-center" style="padding: 20px;background: white;">
+                    <div style="width: 256px;background: url(&quot;assets/img/2UML_QR.png?h=4bdd96d83ee42aeb1c0b905895bde5d2&quot;) center / contain no-repeat;height: 256px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;padding: 20px;margin-top: 48px;min-height: 100vh;">
         <!-- Start: 1 Row 1 Column -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1
-                        style="font-family: 'Honk', system-ui;text-align: center;margin-bottom: 50px;font-weight: bold;font-size: 64px;">
-                        2UML</h1>
+                    <h1 style="font-family: 'Honk', system-ui;text-align: center;margin-bottom: 50px;font-weight: bold;font-size: 64px;color: var(--bs-body-color);">2UML</h1>
                 </div>
             </div>
         </div><!-- End: 1 Row 1 Column -->
         <!-- Start: 2 Rows 1+2 Columns -->
         <div class="container">
             <div class="row">
-                <div class="col-md-6 d-flex justify-content-center align-items-center" style="margin-bottom: 24px;">
-                    <textarea class="bg-black" id="message-2" name="description" style="width: 100%;color: #00ff00;font-family: 'JetBrains Mono', monospace;border-radius: 0;border-width: 2px;border-color: black;min-height: 384px;padding: 20px;" wrap="soft">@startuml
-Bob -> Alice : hello
-@enduml</textarea>
-                </div>
-                <div class="col d-flex flex-row justify-content-center align-items-end"
-                    style="border-radius: 0;padding: 20px;margin: 0 12px;background: #f5f5f5;margin-bottom: 24px;min-height: 256px;border: 2px solid black ;">
-                    <div class="d-flex justify-content-center align-items-center"
-                        style="width: 100%;background: linear-gradient(-30deg, #0e0725 0%, #5c03bc 33%, #e536ab 66%, #f4e5f0 100%);padding: 20px;height: 100%;">
-                        <div id="img-diagram" style="width: 100%;height: 100%;background: url(&quot;assets/img/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80.png?h=2bfc053a57790c4aae57f49867b651b2&quot;) center / contain no-repeat;"></div>
-                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom"
-                        type="button"
-                        style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none"
-                            style="font-size: 32px;">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M2 9.5C2 11.433 3.567 13 5.5 13H9V15.5858L7.70711 14.2929C7.31658 13.9024 6.68342 13.9024 6.29289 14.2929C5.90237 14.6834 5.90237 15.3166 6.29289 15.7071L9.29289 18.7071C9.68342 19.0976 10.3166 19.0976 10.7071 18.7071L13.7071 15.7071C14.0976 15.3166 14.0976 14.6834 13.7071 14.2929C13.3166 13.9024 12.6834 13.9024 12.2929 14.2929L11 15.5858V13H13.5C15.9853 13 18 10.9853 18 8.5C18 6.01472 15.9853 4 13.5 4C13.2912 4 13.0857 4.01422 12.8845 4.04175C12.4551 2.29538 10.8788 1 9 1C6.79086 1 5 2.79086 5 5C5 5.35223 5.04553 5.69382 5.13102 6.01922C3.37146 6.20358 2 7.69163 2 9.5ZM11 13H9V8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8V13Z"
-                                fill="currentColor"></path>
+                <div class="col-md-6 d-flex justify-content-center align-items-center" style="margin-bottom: 24px;"><textarea id="compiler" style="width: 100%;height: 100%;border-width: 0px;">@startuml
+    Client -> Server : Request
+    Server --> Client: Response
+@enduml</textarea></div>
+                <div class="col d-flex flex-row justify-content-center align-items-end custom" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;border: 2px solid var(--bs-body-color);">
+                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;padding: 20px;height: 100%;border-radius: 20px;background: white;"><img id="img-uml" style="width: 100%;height: 300px;object-fit: contain;object-position: center;background-repeat: no-repeat;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e" href=""></div><button class="btn btn-primary d-flex justify-content-center align-items-center zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;background: white;color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cloud-download-fill" style="font-size: 24px;">
+                            <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z"></path>
                         </svg></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-5" style="border-width: 0px;">
-                        <div class="card-body p-sm-5"
-                            style="background: white;border-radius: 0;border: 2px solid black;padding: 20px!important;">
+                        <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;border: 2px solid var(--bs-body-color);">
                             <form method="post">
-                                <div class="d-flex justify-content-center align-items-end mb-3"
-                                    style="margin: 0!important;padding: 0;"><textarea class="form-control"
-                                        id="message-1" name="description"
-                                        style="font-family: Inter, sans-serif;width: 100%!important;color: gray;border-width: 0px;border-radius: 0;">Example: Design a program capable of modeling data within a system.</textarea><button
-                                        class="btn btn-primary d-flex justify-content-center align-items-center custom zoom"
-                                        type="button"
-                                        style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                            viewBox="0 0 20 20" fill="none" style="font-size: 32px;">
-
-                                            <path
-                                                d="M13.5858 3.58579C14.3668 2.80474 15.6332 2.80474 16.4142 3.58579C17.1953 4.36683 17.1953 5.63316 16.4142 6.41421L15.6213 7.20711L12.7929 4.37868L13.5858 3.58579Z"
-                                                fill="currentColor"></path>
-                                            <path
-                                                d="M11.3787 5.79289L3 14.1716V17H5.82842L14.2071 8.62132L11.3787 5.79289Z"
-                                                fill="currentColor"></path>
-                                        </svg></button></div>
-                                <div class="d-flex justify-content-center align-items-center"></div>
+                                <div class="d-flex justify-content-center align-items-end mb-3" style="margin: 0!important;padding: 0;">
+                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="border-width: 0px;border-radius: 0;font-family: Inter, sans-serif;margin-bottom: 20px;" placeholder="Design a program ..."></textarea><select class="form-select" id="select-uml" style="padding: 12px;font-family: Inter, sans-serif;border-radius: 0;border: 2px solid var(--bs-body-color) ;" required="">
+                                            <option value="">Activity</option>
+                                            <option value="">Class</option>
+                                            <option value="">Component</option>
+                                            <option value="">Deployment</option>
+                                            <option value="">Object</option>
+                                            <option value="" selected="">Sequence</option>
+                                            <option value="">State</option>
+                                            <option value="">Use-case</option>
+                                            <option value="">Timing</option>
+                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="button" style="border-width: 0px;border-radius: 100%;padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-return-left" style="font-size: 24px;">
+                                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"></path>
+                                        </svg></button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -176,15 +137,17 @@ Bob -> Alice : hello
             </div>
         </div><!-- End: 2 Rows 1+2 Columns -->
     </section><!-- Start: Footer Dark -->
-    <footer class="text-center bg-dark custom" style="border-top: 2px solid black ;">
+    <footer class="text-center bg-dark custom" style="border-top: 2px solid var(--bs-body-color);">
         <div class="container text-white py-4 py-lg-5" style="padding: 20px;">
-            <p class="text-muted mb-0" style="color: white!important;font-family: 'JetBrains Mono', monospace;">MIT
-                License Copyright (c) 2UML 2024</p>
+            <p class="text-muted mb-0" style="font-family: 'JetBrains Mono', monospace;color: white!important;">MIT License Copyright (c) 2UML 2024</p>
         </div>
-    </footer><!-- End: Footer Dark -->
+    </footer><!-- End: Footer Dark --><script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/src/plantuml.js"></script>
-    <script src="assets/src/plantuml_core.js"></script>
+    <script src="assets/js/code_mirror.js?h=0ab73aa3f16f8460ac9bfe7eb3fd96d0"></script>
+    <script src="assets/js/download-uml.js?h=6b42d5a2b3705f636cfd803d1a7b8e7e"></script>
+    <script src="assets/js/theme.js?h=e5d617e6d0ada1416e9cf499e3dc5d70"></script>
 </body>
 
 </html>
