@@ -8,11 +8,22 @@ import { initializeCompiler } from "./code_mirror.js";
  */
 let currentPath = window.location.pathname.replace('index.html', '');;
 const compiler = initializeCompiler();
+const loader_img_uml = document.getElementById('loader-img-uml');
 const img_uml = document.getElementById('img-uml');
+
+loader_img_uml.setAttribute('class', '');
+img_uml.setAttribute('class', 'none');
+
 function render() {
+    loader_img_uml.setAttribute('class', '');
+    img_uml.setAttribute('class', 'none');
+
     plantuml.renderPng(compiler.getValue())
         .then(blob => {
             img_uml.src = window.URL.createObjectURL(blob);
+
+            loader_img_uml.setAttribute('class', 'none');
+            img_uml.setAttribute('class', '');
         })
         .catch(error => {
             console.error(error);
@@ -40,6 +51,9 @@ const jarPath = `/app/${currentPath}assets/lib`;
 
 plantuml.initialize(jarPath)
     .then(() => {
+        loader_img_uml.setAttribute('class', '');
+        img_uml.setAttribute('class', 'none');
+
         render();
     })
     .catch(error => {

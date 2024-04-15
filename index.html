@@ -32,11 +32,13 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json?h=f675c9e6979c44a498f7de97cd4fad02" crossorigin="use-credentials">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=48ca19b27cc4c5a39493dccc6f3bff68">
-    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=b92e8b2df3ab3edc78f212d4b548c66b">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=b85901ed1b422faa13e1e2c4e3f5e3b5">
+    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=6cada7b60a826eaed2aa7a031f7a1b79">
     <link rel="stylesheet" href="assets/css/code_mirror.css?h=c79f051ba28e18f7c0c05abd75912cad">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
+    <link rel="stylesheet" href="assets/css/loader.css?h=05f8705ec265076de9d0fa8086516620">
+    <link rel="stylesheet" href="assets/css/styles.css?h=701d740e5eeeea4696f9c5ccc0909f3c">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 </style>
@@ -105,7 +107,23 @@
     Server --> Client: Response
 @enduml</textarea></div>
                 <div class="col d-flex flex-row justify-content-center align-items-end custom" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;border: 2px solid var(--bs-body-color);">
-                    <div class="d-flex justify-content-center align-items-center" style="padding: 20px;border-radius: 20px;background: white;width: 100%;height: 100%;"><img id="img-uml" style="width: 100%;height: 300px;object-fit: contain;object-position: center;background-repeat: no-repeat;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e"></div><button class="btn btn-primary d-flex justify-content-center align-items-center zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;background: white;color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cloud-download-fill" style="font-size: 24px;">
+                    <div class="d-flex justify-content-center align-items-center" style="padding: 20px;border-radius: 20px;background: white;width: 100%;height: 300px;"><img id="img-uml" style="width: 100%;height: 300px;object-fit: contain;object-position: center;background-repeat: no-repeat;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
+                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;height: 300px;width: 224px;"><div id="loader-img-uml" class="none">
+    <svg class="circle-outer" viewBox="0 0 86 86">
+        <circle class="back" cx="43" cy="43" r="40"></circle>
+        <circle class="front" cx="43" cy="43" r="40"></circle>
+        <circle class="new" cx="43" cy="43" r="40"></circle>
+    </svg>
+    <svg class="circle-middle" viewBox="0 0 60 60">
+        <circle class="back" cx="30" cy="30" r="27"></circle>
+        <circle class="front" cx="30" cy="30" r="27"></circle>
+    </svg>
+    <svg class="circle-inner" viewBox="0 0 34 34">
+        <circle class="back" cx="17" cy="17" r="14"></circle>
+        <circle class="front" cx="17" cy="17" r="14"></circle>
+    </svg>
+</div></div>
+                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 12px;background: white;color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cloud-download-fill" style="font-size: 24px;">
                             <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z"></path>
                         </svg></button>
                 </div>
