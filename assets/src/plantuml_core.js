@@ -33,11 +33,10 @@ if (currentPath == "/") {
 
 const jarPath = `/app/${currentPath}assets/lib`;
 plantuml.initialize(jarPath).then(() => {
-    document.addEventListener('DOMContentLoaded', (event) => {
-        debouncedRender()
+    document.addEventListener('DOMContentLoaded', (e) => {
+        debouncedRender();
     });
-
-    editor.addEventListener('input', (event) => {
-        debouncedRender()
-    })
+    editor.addEventListener('input', (e) => {
+        debouncedRender();
+    });
 })
