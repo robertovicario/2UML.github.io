@@ -8,6 +8,7 @@ const editor = document.getElementById('compiler');
 
 function _render() {
     plantuml.renderPng(editor.value).then((blob) => {
+        document.getElementById('img-uml').src = "";
         document.getElementById('img-uml').src = window.URL.createObjectURL(blob);
     }).catch((error) => {
         console.log(error)
@@ -31,12 +32,8 @@ if (currentPath == "/") {
     currentPath = "";
 }
 
-const jarPath = `/app/${currentPath}assets/lib`;
+let jarPath = `/app/${currentPath}assets/lib`;
 plantuml.initialize(jarPath).then(() => {
-    document.addEventListener('DOMContentLoaded', (e) => {
-        debouncedRender();
-    });
-    editor.addEventListener('input', (e) => {
-        debouncedRender();
-    });
-})
+    document.addEventListener('DOMContentLoaded', debouncedRender());
+    editor.addEventListener('input', debouncedRender());
+});

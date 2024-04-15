@@ -2,6 +2,7 @@ const plantuml = (() => {
     const initialize = async (cheerpjPath = "/app/assets/lib") => {
         await Promise.all([
             cheerpjInit({ preloadResources: _runtimeResources() })
+            
         ])
         await cheerpjRunMain("com.plantuml.wasm.v1.RunInit", `${cheerpjPath}/plantuml-core.jar`, `${cheerpjPath}/`)        
     }
