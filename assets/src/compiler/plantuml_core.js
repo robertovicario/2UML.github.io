@@ -1,8 +1,13 @@
-import { initializeCompiler } from "../js/code_mirror.js";
+/**
+ * This script initializes a PlantUML compiler using CodeMirror for real-time rendering of UML diagrams.
+ */
+import { initializeCompiler } from "./code_mirror.js";
 
+/**
+ * It renders the UML diagram to a PNG blob and sets it as the source of the <img> element.
+ */
 let currentPath = window.location.pathname.replace('index.html', '');;
 const compiler = initializeCompiler();
-const compiler_uml = document.getElementById('compiler');
 const img_uml = document.getElementById('img-uml');
 function render() {
     plantuml.renderPng(compiler.getValue())
@@ -14,18 +19,22 @@ function render() {
         });
 }
 
-function debounce(func, delay = 400) {
+/**
+ * Debounces a function to avoid calling it too frequently.
+ * 
+ * @param {Function} func - The function to be debounced.
+ * @param {number} delay - The delay in milliseconds.
+ * @returns {Function} - The debounced function.
+ */
+function debounce(func, delay = 500) {
     let timerId;
     return (...args) => {
         clearTimeout(timerId);
-        timerId = setTimeout(() => {
-            func.apply(this, args);
-        }, delay);
+        timerId = setTimeout(() => func.apply(this, args), delay);
     };
 }
-const debouncedRender = debounce(() => render())
+compiler.on('change', debounce(render));
 
-compiler.on('change',()=>debouncedRender());
 currentPath = currentPath === "/" ? "" : window.location.pathname;
 const jarPath = `/app/${currentPath}assets/lib`;
 
