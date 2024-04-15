@@ -15,15 +15,15 @@ loader_img_uml.setAttribute('class', '');
 img_uml.setAttribute('class', 'none');
 
 function render() {
-    loader_img_uml.setAttribute('class', '');
-    img_uml.setAttribute('class', 'none');
+    loader_img_uml.classList.remove('none');
+    img_uml.classList.add('none')
 
     plantuml.renderPng(compiler.getValue())
         .then(blob => {
             img_uml.src = window.URL.createObjectURL(blob);
 
-            loader_img_uml.setAttribute('class', 'none');
-            img_uml.setAttribute('class', '');
+            loader_img_uml.classList.add('none');
+            img_uml.classList.remove('none')
         })
         .catch(error => {
             console.error(error);
@@ -51,8 +51,8 @@ const jarPath = `/app/${currentPath}assets/lib`;
 
 plantuml.initialize(jarPath)
     .then(() => {
-        loader_img_uml.setAttribute('class', '');
-        img_uml.setAttribute('class', 'none');
+        loader_img_uml.classList.add('none');
+        img_uml.classList.remove('none')
 
         render();
     })
