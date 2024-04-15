@@ -1,6 +1,6 @@
 import { initializeCompiler } from "../js/code_mirror.js";
 
-let currentPath = window.location.pathname;
+let currentPath = window.location.pathname.replace('index.html', '');;
 const compiler = initializeCompiler();
 const compiler_uml = document.getElementById('compiler');
 const img_uml = document.getElementById('img-uml');
@@ -26,12 +26,7 @@ function debounce(func, delay = 400) {
 const debouncedRender = debounce(() => render())
 
 compiler.on('change',()=>debouncedRender());
-if (currentPath.includes('index.html')) {
-    currentPath = currentPath.replace('index.html', '');
-}
 currentPath = currentPath === "/" ? "" : window.location.pathname;
-
-
 const jarPath = `/app/${currentPath}assets/lib`;
 
 plantuml.initialize(jarPath)
