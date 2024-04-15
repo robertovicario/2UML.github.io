@@ -8,9 +8,9 @@
 > ### Try 2UML
 > Ready to experience the simplicity? Try 2UML here: [robertovicario.github.io/2UML](https://robertovicario.github.io/2UML)
 
-## User Interface
+## Preview
 
-<img src="https://github.com/robertovicario/2UML/assets/119845903/94157173-4c6d-4b80-991d-2fcad65380d7" width=512>
+<img src="https://github.com/robertovicario/2UML/assets/119845903/24552448-a2a6-4536-a13d-c2067258001f" width=512>
 
 ## License
 
