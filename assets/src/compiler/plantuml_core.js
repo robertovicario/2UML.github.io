@@ -6,24 +6,30 @@ import { initializeCompiler } from "./code_mirror.js";
 /**
  * It renders the UML diagram to a PNG blob and sets it as the source of the <img> element.
  */
-let currentPath = window.location.pathname.replace('index.html', '');;
+let currentPath = window.location.pathname.replace('index.html', '');
 const compiler = initializeCompiler();
 const loader_img_uml = document.getElementById('loader-img-uml');
 const img_uml = document.getElementById('img-uml');
 
-loader_img_uml.setAttribute('class', '');
-img_uml.setAttribute('class', 'none');
+loader_img_uml.classList.remove('none');
+img_uml.classList.add('none');
+
+setTimeout(() => {
+    loader_img_uml.classList.add('none');
+    img_uml.classList.remove('none');
+}, 5000);
 
 function render() {
     loader_img_uml.classList.remove('none');
-    img_uml.classList.add('none')
+    img_uml.classList.add('none');
 
     plantuml.renderPng(compiler.getValue())
         .then(blob => {
             img_uml.src = window.URL.createObjectURL(blob);
-
-            loader_img_uml.classList.add('none');
-            img_uml.classList.remove('none')
+            setTimeout(() => {
+                loader_img_uml.classList.add('none');
+                img_uml.classList.remove('none');
+            }, 2000);
         })
         .catch(error => {
             console.error(error);
@@ -52,11 +58,10 @@ const jarPath = `/app/${currentPath}assets/lib`;
 plantuml.initialize(jarPath)
     .then(() => {
         loader_img_uml.classList.add('none');
-        img_uml.classList.remove('none')
+        img_uml.classList.remove('none');
 
         render();
     })
     .catch(error => {
         console.error("Error: ", error);
     });
-    

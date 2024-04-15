@@ -2,3 +2,8 @@
   display: none!important;
 }
 
+::selection {
+  color: white;
+  background: #5c03bc;
+}
+
