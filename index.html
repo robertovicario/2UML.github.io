@@ -32,9 +32,9 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json?h=ea0827671849e0921f72d4e05803fb4c" crossorigin="use-credentials">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=22c5335568c348a828d2ad0777370f4a">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=edb5d1b63334a70845f1673fa2ac89ba">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css?h=f46138e906f7948e52ae6aac2657a2f0">
-    <link rel="stylesheet" href="assets/css/code_mirror.css?h=19acf1d3eb9b0b86b0c46e9e009a38b0">
+    <link rel="stylesheet" href="assets/css/code_mirror.css?h=52ac51cdcbe1f0dc06203003ce4849ff">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
     <link rel="stylesheet" href="assets/css/loader.css?h=05f8705ec265076de9d0fa8086516620">
@@ -47,12 +47,12 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a href="#" style="margin: 20px;padding: 10px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom" style="color: var(--bs-body-color);font-size: 24px;">
+    <div class="d-flex justify-content-end align-items-start" style="width: 100%;height: 0;"><a class="menu" href="#" style="margin: 20px;padding: 10px;" data-bs-target="#offcanvas-menu" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" class="zoom" style="color: var(--bs-body-color);font-size: 24px;">
 
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 6.44772 3.44772 6 4 6H16C16.5523 6 17 6.44772 17 7C17 7.55228 16.5523 8 16 8H4C3.44772 8 3 7.55228 3 7Z" fill="currentColor"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 13C3 12.4477 3.44772 12 4 12H16C16.5523 12 17 12.4477 17 13C17 13.5523 16.5523 14 16 14H4C3.44772 14 3 13.5523 3 13Z" fill="currentColor"></path>
             </svg></a></div><!-- Start: Sidebar With Menu -->
-    <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvas-menu" style="/*border-right: 2px solid var(--bs-body-color);*/box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+    <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvas-menu" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;z-index: 8888;">
         <div class="offcanvas-header d-flex justify-content-center align-items-center" style="padding: 20px;">
             <h1 style="width: 100%;font-size: 32px;margin: 0;font-family: 'Honk', system-ui;">2UML</h1><a class="zoom" href="#" style="padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;color: var(--bs-body-color);" aria-label="Close" data-bs-dismiss="offcanvas">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="currentColor"></path>
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div><!-- End: Sidebar With Menu -->
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1" style="padding: 20px;">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1" style="padding: 20px;z-index: 9999;">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-center align-items-center" style="padding: 20px;background: white;">
@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-    <section class="d-flex flex-column justify-content-end align-items-center" style="width: 100%;padding: 20px;min-height: 100vh;">
+    <section class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;padding: 20px;min-height: 100vh;">
         <!-- Start: 1 Row 1 Column -->
         <div class="container">
             <div class="row">
@@ -107,9 +107,9 @@
     Client -> Server : Request
     Server --> Client: Response
 @enduml</textarea></div>
-                <div class="col d-flex flex-row justify-content-center align-items-end" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;/*border: 2px solid var(--bs-body-color);*/background: var(--bs-dark);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
-                    <div class="d-flex justify-content-center align-items-center" style="padding: 10px;width: 100%;height: 100%;background: white;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;"><img id="img-uml" class="none" style="width: 100%;object-fit: contain;object-position: center;height: 230px;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
-                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;z-index: 9999;width: 25%;height: 25%;"><div id="loader-img-uml">
+                <div class="col d-flex flex-row justify-content-center align-items-end" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;background: var(--bs-dark);box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;">
+                    <div class="d-flex justify-content-center align-items-center" style="padding: 10px;width: 100%;height: 100%;background: white;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;border-radius: 20px;"><img id="img-uml" class="none" style="width: 100%;object-fit: contain;object-position: center;height: 230px;" src="example.png">
+                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;z-index: 7777;width: 25%;height: 25%;"><div id="loader-img-uml">
     <svg class="circle-outer" viewBox="0 0 86 86">
         <circle class="back" cx="43" cy="43" r="40"></circle>
         <circle class="front" cx="43" cy="43" r="40"></circle>
@@ -124,7 +124,7 @@
         <circle class="front" cx="17" cy="17" r="14"></circle>
     </svg>
 </div></div>
-                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 10px;color: white;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
+                    </div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-download" type="button" style="margin-left: 20px;border-width: 0px;border-radius: 100%;padding: 10px;color: white;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 9.5C2 11.433 3.567 13 5.5 13H9V15.5858L7.70711 14.2929C7.31658 13.9024 6.68342 13.9024 6.29289 14.2929C5.90237 14.6834 5.90237 15.3166 6.29289 15.7071L9.29289 18.7071C9.68342 19.0976 10.3166 19.0976 10.7071 18.7071L13.7071 15.7071C14.0976 15.3166 14.0976 14.6834 13.7071 14.2929C13.3166 13.9024 12.6834 13.9024 12.2929 14.2929L11 15.5858V13H13.5C15.9853 13 18 10.9853 18 8.5C18 6.01472 15.9853 4 13.5 4C13.2912 4 13.0857 4.01422 12.8845 4.04175C12.4551 2.29538 10.8788 1 9 1C6.79086 1 5 2.79086 5 5C5 5.35223 5.04553 5.69382 5.13102 6.01922C3.37146 6.20358 2 7.69163 2 9.5ZM11 13H9V8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8V13Z" fill="currentColor"></path>
                         </svg></button>
                 </div>
@@ -132,10 +132,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-5 glass" style="border-width: 0px;background: transparent;margin-bottom: 0!important;">
-                        <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;/*border: 2px solid var(--bs-body-color);*/background: var(--bs-dark);box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                        <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;/*border: 2px solid var(--bs-body-color);*/background: var(--bs-dark);box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;">
                             <form method="post">
                                 <div class="d-flex justify-content-center align-items-end mb-3" style="margin: 0!important;padding: 0;">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="margin-bottom: 20px;padding: 10px;resize: none;font-family: Inter, sans-serif;height: 68px;background: var(--bs-dark);border: none;border-radius: 0;" placeholder="Design a program ..." required=""></textarea><select class="form-select" id="select-uml" style="padding: 10px;font-family: Inter, sans-serif;border-radius: 0;border: none;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;" required="">
+                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="margin-bottom: 20px;padding: 10px 20px;resize: none;font-family: Inter, sans-serif;height: 68px;background: var(--bs-dark);border: none;border-radius: 0;" placeholder="Design a program ..." required=""></textarea><select class="form-select" id="select-uml" style="padding: 10px 20px;font-family: Inter, sans-serif;border-radius: 20px;border: none;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;" required="">
                                             <option value="">Activity</option>
                                             <option value="">Class</option>
                                             <option value="">Component</option>
@@ -143,9 +143,9 @@
                                             <option value="">Object</option>
                                             <option value="" selected="">Sequence</option>
                                             <option value="">State</option>
-                                            <option value="">Use-case</option>
                                             <option value="">Timing</option>
-                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="submit" style="border-width: 0px;border-radius: 100%;padding: 10px;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
+                                            <option value="">Use-case</option>
+                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="submit" style="border-width: 0px;border-radius: 100%;padding: 10px;box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 9.70711C2.90237 9.31658 2.90237 8.68342 3.29289 8.29289L9.29289 2.29289C9.68342 1.90237 10.3166 1.90237 10.7071 2.29289L16.7071 8.29289C17.0976 8.68342 17.0976 9.31658 16.7071 9.70711C16.3166 10.0976 15.6834 10.0976 15.2929 9.70711L11 5.41421L11 17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17L9 5.41421L4.70711 9.70711C4.31658 10.0976 3.68342 10.0976 3.29289 9.70711Z" fill="currentColor"></path>
                                         </svg></button>
                                 </div>
@@ -156,7 +156,7 @@
             </div>
         </div><!-- End: 2 Rows 1+2 Columns -->
     </section><!-- Start: Footer Dark -->
-    <footer class="text-center bg-dark" style="background: black!important;margin-top: 50px;">
+    <footer class="text-center bg-dark" style="background: black!important;margin-top: 50px;border-top: 2px solid white ;">
         <div class="container text-white py-4 py-lg-5" style="padding: 20px;"><a href="https://github.com/robertovicario/2UML/blob/main/LICENSE" style="color: white;font-family: Inter, sans-serif;text-decoration: none;" target="_blank">The MIT License Copyright (c) 2UML 2024</a></div>
     </footer><!-- End: Footer Dark --><script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js"></script>
