@@ -14,8 +14,6 @@ If you discover a security vulnerability within the project, please report it to
 
 To report a vulnerability, please send an email to [rvicariodev@gmail.com](mailto:rvicariodev@gmail.com) with a detailed description of the vulnerability. We kindly request that you do not disclose the vulnerability publicly until we have had a chance to address it.
 
-We are committed to responding to security vulnerability reports promptly and will provide regular updates on the progress of fixing the issue. Once a vulnerability is reported, our security team will assess the severity and impact of the issue and take appropriate actions to address it.
-
 Depending on the severity and impact of the vulnerability, you can expect one of the following outcomes:
 
 - **Accepted Vulnerability**: If the vulnerability is confirmed, we will work diligently to develop and release a fix as soon as possible. We will keep you informed about the progress and let you know when the fix is available.
