@@ -5,12 +5,14 @@
 2UML is an intuitive and efficient tool designed to streamline the process of creating Unified Modeling Language (UML) diagrams. With its user-friendly interface, 2UML empowers users to generate UML diagrams effortlessly from natural language inputs. Whether you're a seasoned software developer, a business analyst, or a student learning UML, 2UML simplifies the complex task of visualizing and communicating system architectures, designs, and processes.
 
 > [!NOTE]
+> 
 > ### Try 2UML
+> 
 > Ready to experience the simplicity? Try 2UML here: [robertovicario.github.io/2UML](https://robertovicario.github.io/2UML)
 
 ## Preview
 
-<img src="https://github.com/robertovicario/2UML/assets/119845903/24552448-a2a6-4536-a13d-c2067258001f" width=512>
+<img src="https://github.com/robertovicario/2UML/assets/119845903/52fe719c-4a6b-496f-ab50-2c1de9be244a" width=512>
 
 ## License
 
