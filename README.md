@@ -38,5 +38,3 @@ This project is distributed under [The MIT License](https://opensource.org/licen
 >   - **Author:** [Leaning Technologies](https://leaningtech.com)
 >   - **License:** [CheerpJ Community License](https://labs.leaningtech.com/cheerpj3/licensing)
 >   - **Source:** [Website](https://cheerpj.com)
->   
-> Please, take a moment to explore their work and show appreciation for their contributions.
