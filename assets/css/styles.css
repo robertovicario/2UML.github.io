@@ -1,9 +1,13 @@
-.none {
-  display: none!important;
+:root {
+  /*--bs-body-color-dark: black!important;*/
 }
 
 ::selection {
   background: #e536ab;
   color: white;
+}
+
+.none {
+  display: none!important;
 }
 

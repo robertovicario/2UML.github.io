@@ -32,13 +32,14 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png?h=765ebb99725c311d6b70f5d1d4dc48db">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json?h=ea0827671849e0921f72d4e05803fb4c" crossorigin="use-credentials">
-    <link rel="stylesheet" href="assets/css/Inter.css?h=a890f5fd181fcddf277d5b3aed6ffad2">
-    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=a432cf133288f39b27876ba7f8c09867">
-    <link rel="stylesheet" href="assets/css/code_mirror.css?h=c79f051ba28e18f7c0c05abd75912cad">
+    <link rel="stylesheet" href="assets/css/Inter.css?h=a7d1294e7998ae41be2ddbfabaa396fb">
+    <link rel="stylesheet" href="assets/css/JetBrains%20Mono.css?h=fe8b07d9f331840675cc007cdfbf18f5">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css?h=f46138e906f7948e52ae6aac2657a2f0">
+    <link rel="stylesheet" href="assets/css/code_mirror.css?h=ac97f01cbcdca1b2713b48c9c926812d">
     <link rel="stylesheet" href="assets/css/custom.css?h=dce7359e7e5d4103ceb334d8d3e4d3b3">
     <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
     <link rel="stylesheet" href="assets/css/loader.css?h=05f8705ec265076de9d0fa8086516620">
-    <link rel="stylesheet" href="assets/css/styles.css?h=0d62efe58abef66bf2bf54397c96b890">
+    <link rel="stylesheet" href="assets/css/styles.css?h=efc0f985811aa5e10b26d0bf71ff03fe">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 </style>
@@ -91,12 +92,12 @@
             </div>
         </div>
     </div>
-    <section class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;padding: 20px;margin-top: 48px;min-height: 100vh;">
+    <section class="d-flex flex-column justify-content-end align-items-center" style="width: 100%;padding: 20px;min-height: 100vh;">
         <!-- Start: 1 Row 1 Column -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="font-family: 'Honk', system-ui;text-align: center;margin-bottom: 50px;font-weight: bold;font-size: 64px;color: var(--bs-body-color);">2UML</h1>
+                    <h1 style="font-family: 'Honk', system-ui;text-align: center;margin-bottom: 50px;font-weight: bold;font-size: 64px;color: var(--bs-body-color);margin-top: 50px;">2UML</h1>
                 </div>
             </div>
         </div><!-- End: 1 Row 1 Column -->
@@ -107,9 +108,9 @@
     Client -> Server : Request
     Server --> Client: Response
 @enduml</textarea></div>
-                <div class="col d-flex flex-row justify-content-center align-items-end" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;border: 2px solid var(--bs-body-color);background: #f5f5f5;">
-                    <div class="d-flex justify-content-center align-items-center" style="padding: 10px;width: 100%;border: 2px solid black;background: white;height: 100%;"><img id="img-uml" class="none" style="width: 100%;object-fit: contain;object-position: center;height: 300px;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
-                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;z-index: 9999;width: 25%;height: 300px;"><div id="loader-img-uml">
+                <div class="col d-flex flex-row justify-content-center align-items-end" style="padding: 20px;margin: 0 12px;margin-bottom: 24px;border-radius: 20px;border: 2px solid var(--bs-body-color);background: var(--bs-dark);">
+                    <div class="d-flex justify-content-center align-items-center" style="padding: 10px;width: 100%;border: 2px solid black;height: 100%;background: white;"><img id="img-uml" class="none" style="width: 100%;object-fit: contain;object-position: center;height: 230px;" src="assets/img/example.png?h=920c35cef6ae2c4a33a11d4919eed56e">
+                        <div class="d-flex justify-content-center align-items-center" style="position: absolute;z-index: 9999;width: 25%;height: 25%;"><div id="loader-img-uml">
     <svg class="circle-outer" viewBox="0 0 86 86">
         <circle class="back" cx="43" cy="43" r="40"></circle>
         <circle class="front" cx="43" cy="43" r="40"></circle>
@@ -131,11 +132,11 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card mb-5 glass" style="border-width: 0px;">
-                        <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;border: 2px solid var(--bs-body-color);">
+                    <div class="card mb-5 glass" style="border-width: 0px;background: transparent;margin-bottom: 0!important;">
+                        <div class="card-body p-sm-5" style="padding: 20px!important;border-radius: 20px;border: 2px solid var(--bs-body-color);background: var(--bs-dark);">
                             <form method="post">
                                 <div class="d-flex justify-content-center align-items-end mb-3" style="margin: 0!important;padding: 0;">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="border-width: 0px;border-radius: 0;font-family: Inter, sans-serif;margin-bottom: 20px;padding: 10px;resize: none;min-height: 68px;" placeholder="Design a program ..."></textarea><select class="form-select" id="select-uml" style="padding: 10px;font-family: Inter, sans-serif;border-radius: 0;border: 2px solid var(--bs-body-color);" required="">
+                                    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%;margin-right: 20px;"><textarea class="form-control" id="desc" name="description" style="margin-bottom: 20px;padding: 10px;resize: none;font-family: Inter, sans-serif;height: 68px;background: var(--bs-dark);border: none;" placeholder="Design a program ..." required=""></textarea><select class="form-select" id="select-uml" style="padding: 10px;border-radius: 0;font-family: Inter, sans-serif;border: 2px solid var(--bs-body-color);" required="">
                                             <option value="">Activity</option>
                                             <option value="">Class</option>
                                             <option value="">Component</option>
@@ -145,7 +146,7 @@
                                             <option value="">State</option>
                                             <option value="">Use-case</option>
                                             <option value="">Timing</option>
-                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="button" style="border-width: 0px;border-radius: 100%;padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
+                                        </select></div><button class="btn btn-primary d-flex justify-content-center align-items-center custom zoom" id="btn-desc" type="submit" style="border-width: 0px;border-radius: 100%;padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 24px;">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 9.70711C2.90237 9.31658 2.90237 8.68342 3.29289 8.29289L9.29289 2.29289C9.68342 1.90237 10.3166 1.90237 10.7071 2.29289L16.7071 8.29289C17.0976 8.68342 17.0976 9.31658 16.7071 9.70711C16.3166 10.0976 15.6834 10.0976 15.2929 9.70711L11 5.41421L11 17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17L9 5.41421L4.70711 9.70711C4.31658 10.0976 3.68342 10.0976 3.29289 9.70711Z" fill="currentColor"></path>
                                         </svg></button>
                                 </div>
@@ -156,7 +157,7 @@
             </div>
         </div><!-- End: 2 Rows 1+2 Columns -->
     </section><!-- Start: Footer Dark -->
-    <footer class="text-center bg-dark" style="border-top: 2px solid var(--bs-body-color);">
+    <footer class="text-center bg-dark" style="border-top: 2px solid var(--bs-body-color);background: black!important;margin-top: 50px;">
         <div class="container text-white py-4 py-lg-5" style="padding: 20px;"><a href="https://github.com/robertovicario/2UML/blob/main/LICENSE" style="color: white;font-family: 'JetBrains Mono', monospace;text-decoration: none;" target="_blank">The MIT License Copyright (c) 2UML 2024</a></div>
     </footer><!-- End: Footer Dark --><script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js"></script>
