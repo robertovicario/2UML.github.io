@@ -18,9 +18,9 @@
 
 This project is distributed under [The MIT License](https://opensource.org/license/mit). You can find the complete text of the license in the project repository.
 
+### Credits
+
 > [!IMPORTANT]
->
-> ### Credits
 >
 > We believe in acknowledging the contributions of those who have made this project possible. Below are the individuals and technologies that have played a significant role:
 >
