@@ -12,7 +12,7 @@
 
 ## Preview
 
-<img src="https://github.com/robertovicario/2UML/assets/119845903/52fe719c-4a6b-496f-ab50-2c1de9be244a" width=512>
+<img src="https://github.com/robertovicario/2UML/assets/119845903/4f80e45f-1b2b-4364-8f90-8ecf59bbaa7a" width=512>
 
 ## License
 
