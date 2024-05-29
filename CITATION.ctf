@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Vicario"
+  given-names: "Roberto"
+  orcid: "https://orcid.org/0009-0009-7426-3958"
+- family-names: "Kadmiri"
+  given-names: "Anoir"
+title: "2UML"
+version: 0.0.1
+date-released: 2024-06-01
+url: "https://github.com/robertovicario/2UML.git"
